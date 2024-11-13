@@ -15,7 +15,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <nav className="w-full py-5 bg-white border-b-[1px] border-b-[#E8ECF2]">
+      <nav className="w-full py-5 bg-white border-b-[1px] border-b-[#E8ECF2] sticky top-0 z-50">
         <Container className="flex items-center justify-between">
           <Link href="/">
             <Image
