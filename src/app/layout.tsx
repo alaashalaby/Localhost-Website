@@ -21,7 +21,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={archivo.className}>
         <Navbar />
-        {children}
+        <main>
+          {children}
+        </main>
       </body>
     </html>
   );
