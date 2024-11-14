@@ -1,6 +1,10 @@
 import Banner from "@/components/Banner";
-export default function Home() {
+import StaysListContainer from "@/components/StaysList/StaysListContainer";
+export default async function Home() {
   return (
-      <Banner/>
-  )
+    <>
+      <Banner />
+      <StaysListContainer />
+    </>
+  );
 }
