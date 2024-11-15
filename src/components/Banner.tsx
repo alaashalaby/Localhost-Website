@@ -1,6 +1,6 @@
 import Container from "@/utils/Container";
 import Image from "next/image";
-import headerImage from "../../public/home-banner.jpg";
+import headerImage from "../../public/home-banner.png";
 import { Button } from "./ui/button";
 import Link from "next/link";
 
@@ -15,13 +15,13 @@ const Banner = () => {
         alt="Header image"
       />
       <Container className="absolute py-9 md:py-11 lg:py-20">
-        <div>
-          <h1 className="font-semibold text-lg md:text-xl lg:text-3xl mb-3">
+        <div className="text-center md:text-left mt-3 md:mt-0">
+          <h1 className="font-semibold text-xl lg:text-3xl mb-2 md:mb-3">
             Find a <span className="text-accentColor">host</span> for every journey.
           </h1>
-          <p className="text-md md:text-xl font-medium mb-5 text-black/80">
+          <p className="text-md font-medium mb-3 md:mb-4 text-black/80">
             Discover the best local rental properties that fits your every
-            travel needs
+            travel needs.
           </p>
           <Button
             asChild
