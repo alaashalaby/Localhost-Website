@@ -10,3 +10,14 @@ export async function getStays() {
     return data;
   }
 }
+
+
+export async function getSingleStay(id:number) {
+  const response =  await fetch(`${apiURL}/${id}`, {
+    next: {
+      revalidate: 300,
+    },
+  });
+  const data: Place = await response.json();
+  return data;
+}
