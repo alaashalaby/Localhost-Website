@@ -2,8 +2,10 @@ import Image from "next/image";
 import stayImg from "../../../public/assets/img_3.png";
 import trendIcon from "../../../public/trend_icon.svg";
 import starIcon from "../../../public/star_icon.svg";
+import Link from "next/link";
 const StayCard = ({ item }: { item: Place }) => {
   return (
+    <Link href={`stayPageDetails/${item.id}`}>
     <div className="bg-white rounded-lg shadow-md relative">
       <div>
         <Image
@@ -38,6 +40,7 @@ const StayCard = ({ item }: { item: Place }) => {
         </div>
       </div>
     </div>
+    </Link>
   );
 };
 
