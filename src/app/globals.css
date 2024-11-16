@@ -33,3 +33,10 @@
     @apply duration-500 ease-in-out;
   }
 }
+input,input:focus{
+  outline:0;
+}
+input::placeholder{
+  color:#787878;
+  font-size: 0.9em;
+}

@@ -1,9 +1,15 @@
-import Image from "next/image";
 import bgImage from "../../../public/bgImage.webp";
+import LoginForm from "@/components/forms/LoginForm";
 export default function LoginPage() {
   return (
-    <div className="relative w-full h-screen">
-      <Image src={bgImage} fill priority alt="bgImage" />
+    <div
+      className="w-full h-screen bg-no-repeat bg-center flex items-center justify-center sm:px-3 md:px-0"
+      style={{
+        backgroundImage: `url(${bgImage.src})`,
+        backgroundSize: "100% 100vh",
+      }}
+    >
+      <LoginForm />
     </div>
   );
 }
