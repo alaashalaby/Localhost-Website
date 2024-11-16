@@ -40,19 +40,22 @@ const Navbar = () => {
             </ul>
           </div>
           <div>
-            <Button asChild variant="link" className="p-0">
+            <Button
+              className="p-0 hover:bg-transparent hoverEffect"
+              variant="ghost"
+            >
               <Link href="/login">
                 <User2Icon className="text-accentColor me-3" />
               </Link>
             </Button>
             <Button
-              variant="link"
-              className="p-0 md:hidden"
+              className="p-0 md:hidden hover:bg-transparent hoverEffect"
+              variant="ghost"
               onClick={toggleMenu}
               aria-label="Toggle Navigation Menu"
             >
               {isMenuOpen ? (
-                <X className="text-accentColor" />
+                <X className="text-accentColor"/>
               ) : (
                 <MenuIcon className="text-accentColor" />
               )}
