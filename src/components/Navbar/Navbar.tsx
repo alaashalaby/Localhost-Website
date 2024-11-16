@@ -14,8 +14,8 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
   return (
-    <>
-      <nav className="w-full py-5 bg-white border-b-[1px] border-b-[#E8ECF2] sticky top-0 z-50">
+    <header className="w-full sticky top-0 z-50">
+      <nav className="py-5 bg-white border-b-[1px] border-b-[#E8ECF2]">
         <Container className="flex items-center justify-between">
           <Link href="/">
             <Image
@@ -61,7 +61,7 @@ const Navbar = () => {
         </Container>
       </nav>
       <ResponsiveMenu isMenuOpen={isMenuOpen} />
-    </>
+    </header>
   );
 };
 
