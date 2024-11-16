@@ -5,8 +5,7 @@ import starIcon from "../../../public/star_icon.svg";
 import Link from "next/link";
 const StayCard = ({ item }: { item: Place }) => {
   return (
-    <Link href={`stayPageDetails/${item.id}`}>
-    <div className="bg-white rounded-lg shadow-md relative">
+    <div className="link-overlay-wrapper bg-white rounded-lg shadow-md relative cursor-pointer">
       <div>
         <Image
           src={stayImg}
@@ -18,7 +17,11 @@ const StayCard = ({ item }: { item: Place }) => {
       <div className="p-4">
         <div className="flex justify-between mb-3">
           <div>
-            <h2 className="text-primaryColor font-bold">{item.name}</h2>
+            <Link href={`stayPageDetails/${item.id}`}>
+              <h2 className="link-overlay text-primaryColor hover:text-accentColor hoverEffect font-bold">
+                {item.name}
+              </h2>
+            </Link>
             <p className="text-secondaryColor">
               {item.city}, {item.country}, {item.state}
             </p>
@@ -30,7 +33,7 @@ const StayCard = ({ item }: { item: Place }) => {
         </div>
         <div className="flex justify-between items-center">
           <h3 className="text-primaryColor font-bold">
-            ${item.price}{" "}
+            ${item.price}
             <span className="text-secondaryColor font-light">/night</span>
           </h3>
           <div className="flex items-center gap-1">
@@ -40,7 +43,6 @@ const StayCard = ({ item }: { item: Place }) => {
         </div>
       </div>
     </div>
-    </Link>
   );
 };
 
