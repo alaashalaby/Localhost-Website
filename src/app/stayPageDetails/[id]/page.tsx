@@ -4,6 +4,11 @@ import Reviews from "@/components/Reviews";
 import StayDetails from "@/components/StayDetails";
 import StayInfo from "@/components/StayInfo";
 import Container from "@/utils/Container";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Stay Page details",
+}
 type Props = {
   params: {
     id: number;

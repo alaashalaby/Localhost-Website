@@ -1,6 +1,10 @@
 import RegisterForm from "@/components/forms/RegisterForm";
 import bgImage from "../../../public/bgImage.webp";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Register Page",
+}
 export default function RegisterPage() {
   return (
     <div
