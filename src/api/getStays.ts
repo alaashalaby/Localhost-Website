@@ -1,4 +1,7 @@
 const apiURL: string = "https://672d6cc5fd89797156426232.mockapi.io/places";
+if (!apiURL) {
+  throw new Error("API URL is not defined");
+}
 export async function getStays() {
   const response = await fetch(apiURL, {
     next: {
@@ -9,6 +12,9 @@ export async function getStays() {
     const data: Place[] = await response.json();
     return data;
   }
+  else {
+    throw new Error("Failed to fetch data");
+  }
 }
 
 
@@ -18,6 +24,10 @@ export async function getSingleStay(id:number) {
       revalidate: 300,
     },
   });
-  const data: Place = await response.json();
-  return data;
+  if (response.ok) {
+    const data: Place = await response.json();
+    return data;
+  }else{
+    throw new Error("Failed to fetch data");
+  }
 }
