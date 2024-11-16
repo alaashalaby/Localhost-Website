@@ -13,8 +13,8 @@ export default async function StayPageDetails({ params }:Props) {
   const stayId = params.id;
   return (
     <Container className="py-8">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-        <ImageGallery />
+      <div className="flex flex-col md:flex-row gap-6">
+        <ImageGallery/>
         <StayDetails stayId={stayId} />
       </div>
       <StayInfo />

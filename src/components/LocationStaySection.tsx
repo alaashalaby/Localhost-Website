@@ -3,8 +3,8 @@ import icon from "../../public/layout_menu-2.svg";
 import { Wifi } from "lucide-react";
 export default function LocationStaySection() {
   return (
-    <div className="py-8 flex flex-col lg:flex-row justify-between gap-5">
-      <div>
+    <div className="py-8 flex flex-col lg:flex-row justify-between gap-6">
+      <div className="w-full md:w-1/2 lg:w-2/3">
         <h3 className="font-bold mb-3 text-xl">Amenities</h3>
         <div className="flex flex-col lg:flex-row justify-between gap-4 lg:gap-8">
           {Array.from({ length: 3 }).map((_, index) => (
@@ -41,7 +41,7 @@ function LocationListItem() {
 
 function IframeCard() {
   return (
-    <div>
+    <div className="w-full md:w-1/2 lg:w-1/3">
       <div className="flex justify-between items-center gap-3 mb-2">
         <div>
           <h3 className="font-semibold text-lg text-primaryColor">

@@ -18,12 +18,12 @@ export default function ImageGallery() {
   ];
   const [activeImage, setActiveImage] = useState<StaticImageData>(images[0]);
   return (
-    <div className="rounded-md">
+    <div className="rounded-md w-full md:w-1/2 lg:w-2/3">
       <div>
         <Image
           src={activeImage}
           alt="main image"
-          className="rounded-md w-full h-72"
+          className="rounded-md w-full h-80"
           priority
           objectFit="cover"
           objectPosition="center"

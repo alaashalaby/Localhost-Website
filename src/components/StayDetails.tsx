@@ -9,11 +9,11 @@ import { getSingleStay } from "@/api/getStays";
 export default async function StayDetails({ stayId }: { stayId: number }) {
   const stayData = await getSingleStay(stayId);
   return (
-    <div className="bg-white rounded-sm border-[1px] border-[#E8ECF2] p-4">
+    <div className="bg-white rounded-md border-[1px] border-[#E8ECF2] p-4 w-full md:w-1/2 lg:w-1/3">
       <div className="flex justify-between">
         <div>
-          <h3 className="text-primaryColor font-bold">{stayData.name}</h3>
-          <p className="text-secondaryColor mb-2">
+          <h1 className="text-primaryColor text-lg md:text-2xl font-bold">{stayData.name}</h1>
+          <p className="text-primaryColor mb-2">
             {stayData.city}, {stayData.country}, {stayData.state}
           </p>
           <div className="flex items-center gap-1 leading-[0px]">
