@@ -1,12 +1,11 @@
-import { getStays } from "@/api/getStays";
 import StayCard from "./StayCard";
+import { getPlaces } from "@/api/getPlaces";
 
 const StaysList = async () => {
-  const data = await getStays();
-  const staysData = data?.slice(0, 16);
+  const placesData = await getPlaces();
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 pt-6">
-      {staysData?.map((item) => (
+      {placesData?.map((item) => (
         <StayCard key={item.id} item={item} />
       ))}
     </div>

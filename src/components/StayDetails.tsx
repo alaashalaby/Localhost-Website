@@ -4,21 +4,23 @@ import Image from "next/image";
 import starIcon from "../../public/star_icon.svg";
 import trendIcon from "../../public/trend_icon.svg";
 import personImg from "../../public/person_img-1.png";
-import { getSingleStay } from "@/api/getStays";
+import { getSinglePlace } from "@/api/getPlaces";
 
 export default async function StayDetails({ stayId }: { stayId: number }) {
-  const stayData = await getSingleStay(stayId);
+  const placeData = await getSinglePlace(stayId.toString());
   return (
     <div className="bg-white rounded-md border-[1px] border-[#E8ECF2] p-4 w-full md:w-1/2 lg:w-1/3">
       <div className="flex justify-between">
         <div>
-          <h1 className="text-primaryColor text-lg md:text-2xl font-bold">{stayData.name}</h1>
+          <h1 className="text-primaryColor text-lg md:text-2xl font-bold">
+            {placeData.name}
+          </h1>
           <p className="text-primaryColor mb-2">
-            {stayData.city}, {stayData.country}, {stayData.state}
+            {placeData.city}, {placeData.country}, {placeData.state}
           </p>
           <div className="flex items-center gap-1 leading-[0px]">
             <span className="text-primaryColor font-semibold">
-              {stayData.rate}
+              {placeData.rate}
             </span>
             <Image src={starIcon} width={10} height={10} alt="rate icon" />
             <span className="text-accentColor ms-1">200 Reviews</span>
@@ -41,7 +43,7 @@ export default async function StayDetails({ stayId }: { stayId: number }) {
       </div>
       <div className="flex justify-between items-center gap-2">
         <h3 className="text-primaryColor font-bold text-xl md:text-3xl">
-          ${stayData.price}
+          ${placeData.price}
           <span className="text-secondaryColor font-light text-xl">/night</span>
         </h3>
         <div className="flex items-center gap-1">

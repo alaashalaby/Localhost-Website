@@ -1,5 +1,5 @@
 import Image from "next/image";
-import stayImg from "../../../public/assets/img_3.png";
+import stayImg from "../../../public/assets/img_4.png";
 import trendIcon from "../../../public/trend_icon.svg";
 import starIcon from "../../../public/star_icon.svg";
 import Link from "next/link";
