@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 }
 type Props = {
   params: {
-    id: number;
+    id: string;
   };
 }
 export default async function StayPageDetails({ params }:Props) {
-  const stayId = params.id;
+  const stayId = Number(params.id);
   return (
     <Container className="py-8">
       <div className="flex flex-col md:flex-row gap-6">
